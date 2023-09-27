@@ -1,0 +1,146 @@
+/* Google Font  */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,500;1,600&family=Montserrat:wght@600;700&display=swap");
+
+/* Custom CSS  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+::selection {
+  background-color: #c50529;
+}
+header {
+  width: 100%;
+  min-height: 120vh;
+  background-image: url(home-images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  padding: 2.5% 5%;
+}
+nav img {
+  width: 180px;
+  height: 36px;
+  cursor: pointer;
+}
+nav ul {
+  text-align: right;
+  flex: 1;
+}
+nav ul li {
+  display: inline-block;
+  padding: 6px 15px;
+}
+nav ul li a {
+  color: white;
+  font-size: 16px;
+}
+nav ul li a:hover {
+  color: #c50529;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  transition: 0.6s;
+  background-color: #c50529;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.head {
+  text-align: center;
+  justify-content: center;
+  color: white;
+  margin-top: 10%;
+}
+.head h1 {
+  font-size: 86px;
+  padding-bottom: 25px;
+  line-height: 1.2em;
+}
+.head p {
+  line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300 !important;
+  font-size: 23px;
+  letter-spacing: 1px;
+  margin-bottom: 3%;
+}
+button {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 24px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+#check-btn {
+  font-size: 20px;
+  color: white;
+  float: right;
+  flex: 1;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+/* Responsive  */
+@media (max-width: 858px) {
+  #check-btn {
+    display: block;
+    color: #c50529;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 82vh;
+    background-color: #c50529;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  ul li {
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+  ul li a {
+    color: white;
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+/* For screens smaller than 480px */
+@media (max-width: 636px) {
+  .head h1 {
+    font-size: 70px;
+  }
+  .head p {
+    font-size: 16px;
+    padding-bottom: 5%;
+  }
+  button {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
